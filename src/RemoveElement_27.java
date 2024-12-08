@@ -13,7 +13,7 @@ public class RemoveElement_27 {
         int[] nums = {3,2,2,3};
         int val = 3;
 
-        removeElement(nums, val);
+        System.out.println(removeElement(nums, val));
     }
 
     private static int removeElement(int[] nums, int val) {
