@@ -11,17 +11,20 @@ public class KidsWithTheGreatestNumberOfCandies_1431 {
 
     public static List<Boolean> kidsWithCandies(int[] candies,
                                                int extraCandies) {
-        int max = -1;
-        for(int i : candies){
-            if(i > max){
-                max = i;
+        //finding out how much maxCandy a kid has. (finding the number of
+        // candy , not which kid, we are finding out the maxCandy)
+        int maxNumberOfCandy = -1;
+        for(int candy : candies){
+            if(candy > maxNumberOfCandy){
+                maxNumberOfCandy = candy;
             }
         }
 
+        //creating a new ArrayList of type Boolean to return it
         List<Boolean> result = new ArrayList<>();
 
-        for(int i : candies){
-            if(i + extraCandies >= max){
+        for(int candy : candies){
+            if(candy + extraCandies >= maxNumberOfCandy){
                 result.add(true);
             }
             else{
